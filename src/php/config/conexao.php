@@ -2,7 +2,7 @@
 
     $host = "localhost";
     $usuario = 'root';
-    $senha = "";
+    $senha = "usbw";
     $nome_db = "saga_senai";
 
     $bd_conexao = new mysqli($host, $usuario, $senha, $nome_db);
