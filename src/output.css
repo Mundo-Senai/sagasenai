@@ -554,9 +554,264 @@ video {
   --tw-contain-style:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-\[calc\(fit\+56px\)\] {
+  height: calc(fit + 56px);
+}
+
+.h-full {
+  height: 100%;
+}
+
+.min-h-\[calc\(100\%-40px\)\] {
+  min-height: calc(100% - 40px);
+}
+
+.min-h-fit {
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
+.w-2\/6 {
+  width: 33.333333%;
+}
+
+.w-4\/6 {
+  width: 66.666667%;
+}
+
+.w-\[calc\(fit\+30px\)\] {
+  width: calc(fit + 30px);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.grid-rows-\[auto_1fr_auto\] {
+  grid-template-rows: auto 1fr auto;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-16 {
+  gap: 4rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.place-self-end {
+  place-self: end;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+.whitespace-break-spaces {
+  white-space: break-spaces;
+}
+
+.break-words {
+  overflow-wrap: break-word;
+}
+
+.break-keep {
+  word-break: keep-all;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-\[1px\] {
+  border-width: 1px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.bg-blue-600\/95 {
+  background-color: rgb(37 99 235 / 0.95);
+}
+
+.bg-orange-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
 .bg-red-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+}
+
+.bg-slate-200\/20 {
+  background-color: rgb(226 232 240 / 0.2);
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-500\/50 {
+  background-color: rgb(113 113 122 / 0.5);
+}
+
+.bg-zinc-500\/20 {
+  background-color: rgb(113 113 122 / 0.2);
+}
+
+.bg-zinc-500\/10 {
+  background-color: rgb(113 113 122 / 0.1);
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl {
@@ -564,8 +819,31 @@ video {
   line-height: 2.25rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.text-black\/65 {
+  color: rgb(0 0 0 / 0.65);
+}
+
+.text-black\/85 {
+  color: rgb(0 0 0 / 0.85);
 }
 
 .text-red-200 {
@@ -573,6 +851,27 @@ video {
   color: rgb(254 202 202 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
+}
+
+@media (min-width: 768px) {
+  .md\:w-2\/4 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-4\/12 {
+    width: 33.333333%;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
 }
