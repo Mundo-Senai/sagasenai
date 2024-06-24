@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18/06/2024 às 14:06
+-- Tempo de geração: 24/06/2024 às 15:05
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -32,8 +32,7 @@ CREATE TABLE `cursos` (
   `nome` varchar(150) NOT NULL,
   `data_inicio` date NOT NULL,
   `data_fim` date NOT NULL,
-  `sala_id` int(11) DEFAULT NULL,
-  `usuario_id` int(11) DEFAULT NULL
+  `professor_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -63,7 +62,7 @@ CREATE TABLE `usuarios` (
   `nome` varchar(100) NOT NULL,
   `senha` varchar(100) NOT NULL,
   `papel` tinyint(4) NOT NULL,
-  `curso_id` int(11) DEFAULT NULL
+  `cursos_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -76,8 +75,7 @@ CREATE TABLE `usuarios` (
 ALTER TABLE `cursos`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `nome` (`nome`),
-  ADD KEY `sala_id_fk` (`sala_id`),
-  ADD KEY `usuario_id_fk` (`usuario_id`);
+  ADD KEY `professor_id_fk` (`professor_id`);
 
 --
 -- Índices de tabela `salas`
@@ -92,8 +90,7 @@ ALTER TABLE `salas`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD KEY `teste` (`curso_id`);
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
@@ -125,20 +122,13 @@ ALTER TABLE `usuarios`
 -- Restrições para tabelas `cursos`
 --
 ALTER TABLE `cursos`
-  ADD CONSTRAINT `sala_id_fk` FOREIGN KEY (`sala_id`) REFERENCES `salas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `usuario_id_fk` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `professor_id_fk` FOREIGN KEY (`professor_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Restrições para tabelas `salas`
 --
 ALTER TABLE `salas`
   ADD CONSTRAINT `curso_id_fk` FOREIGN KEY (`curso_id`) REFERENCES `cursos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Restrições para tabelas `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD CONSTRAINT `teste` FOREIGN KEY (`curso_id`) REFERENCES `cursos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
