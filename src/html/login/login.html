@@ -6,27 +6,29 @@
     <title>Document</title>
     <link href="../../output.css" rel="stylesheet" >
 </head>
-<body>
+<body class="bg-slate-500">
     
-    <div class="w-screen h-screen flex items-center justify-center ">
-        <div class="lg:w-3/12 rounded-md lg:w-3/4 h-fit p-8 flex flex-col items-center justify-center bg-[#220fc7] z-20">
-            <h1 class="text-[#fffff4] text-2xl mx-auto">SENAI-Apucarana</h1>
-            <h2 class="text-[#fffff4] text-xl mx-auto"> Agendameno de salas</h2>
+    <div class="w-screen h-screen flex items-center justify-center font-montserrat">
+        <div class="lg:w-3/12 rounded-md w-3/4 h-fit p-8 flex flex-col items-center justify-center bg-[#220fc7] z-20 border-2 border-black">
+            <h1 class="text-[#fffff4] mx-auto text-4xl font-semibold tracking-wide">SENAI-Apucarana</h1>
+
+            <h2 class="text-[#fffff4] mx-auto text-3xl font-semibold tracking-wide"> Agendameno de salas</h2>
+
             <form id="Login" class="flex flex-col gap-4 mt-7">
+
                 <div id="usuário"class= "basis-16">
-                    <h4 class="font-montserrat text-[#fffff4] font-medium">Usuário</h4>
-                    <input type="email"class="shadow-2xl rounded-lg" placeholder="email" id="email" name="email">
+                    <h3 class=" text-[#fffff4] font-medium text-2x1 ">Usuário</h3>
+                    <input type="email" class="bg-slate-300 font-medium rounded-3xl py-1 m-3 text-2x1 border-2 border-black" placeholder="email" id="email" name="email">
                 </div>
                 <div id="senha" class= "text-[#fffff4] font-medium">
-                    <h4>Senha</h4>
-                    <input type="password"class="shadow-2xl  rounded-lg"  placeholder="senha" id="senha" name="senha">
+                    <h3 class="text-2x1">Senha</h3>
+                    <input type="password" class="bg-slate-300 font-medium rounded-3xl py-1 m-3 text-2x1 border-2 border-black"  placeholder="senha" id="senha" name="senha">
                 </div>
                 <div id="botões">
-                    <input type="button" value="Entrar" class=" cursor-pointer py-2.5 w-64 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" id="logar">
+                    <input type="button" value="Entrar" class=" font-semibold border-2 border-black  cursor-pointer py-2.5 w-64 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-500 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" id="logar">
                 </div>
             </form>
                 </div>
         </div>
-    <img src="../../assets/img/fundo-tela-de-login.jpg" class="absolute top-0 w-full blur-md"></div>
 </body>
 </html>
