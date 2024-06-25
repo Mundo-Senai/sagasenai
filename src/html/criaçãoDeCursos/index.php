@@ -11,7 +11,7 @@
     <link href="../../output.css" rel="stylesheet" >
 </head>
 <body class="bg-slate-500">
-    <form action="../../php/controle/criar_curso.php" method="POST" id="enviar_formulario" class="w-screen h-screen flex items-center justify-center flex-col">
+    <form action="../../php/controle/criar_curso.php" method="POST" id="enviar_formulario" class="w-screen h-screen flex items-center justify-center flex-col place-self-center ">
         <div id="conteúdo" class="font-montserrat text-justify bg-contain border-2 border-black	 bg-[#220fc7] rounded-lg text-[#fffff4] shadow-2xl">
 
             <h1 class="text-4xl font-semibold tracking-wide py-1 m-3">Criar Curso</h1>
