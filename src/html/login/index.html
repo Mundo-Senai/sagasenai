@@ -9,29 +9,31 @@
 <body class="bg-slate-500">
     
     <div class="w-screen h-screen flex items-center justify-center font-montserrat">
-        <div class="lg:w-3/12 rounded-md w-3/4 h-fit p-8 flex flex-col items-center justify-center bg-[#220fc7] z-20 border-2 border-black">
-            <h1 class="text-[#fffff4] mx-auto text-4xl font-semibold tracking-wide">SENAI-Apucarana</h1>
+        <div class="lg:w-3/12 rounded-md w-3/4 h-fit p-8 flex flex-col items-center justify-center  bg-blue-600/95  z-20  text-[#fffff4]">
+            
+            <form id="Login" class="flex flex-col gap-4 mt-7  place-self-center items-center justify-center p-4">
+                
+                <div id="usuário"class= "">
+                    <h1 class=" mx-auto text-4xl font-semibold tracking-wide">SENAI-Apucarana</h1>
+        
+                    <h2 class=" mx-auto text-3xl font-semibold tracking-wide"> Agendameno de salas</h2>
 
-            <h2 class="text-[#fffff4] mx-auto text-3xl font-semibold tracking-wide"> Agendameno de salas</h2>
+                    <h3 class=" text-7x1">Usuário</h3>
 
-            <form id="Login" class="flex flex-col gap-4 mt-7">
-
-                <div id="usuário"class= "basis-16">
-                    <h3 class=" text-[#fffff4] font-medium text-2x1 ">Usuário</h3>
-                    <input type="email" class="bg-slate-300 font-medium rounded-3xl py-1 m-3 text-2x1 border-2 border-black" placeholder="email" id="email" name="email">
-                </div>
-                <div id="senha" class= "text-[#fffff4] font-medium">
+                    <input type="email" class="bg-slate-300 font-medium rounded-3xl py-1 m-3 text-2x1" placeholder="email" id="email" name="email">
+              
                     <h3 class="text-2x1">Senha</h3>
-                    <input type="password" class="bg-slate-300 font-medium rounded-3xl py-1 m-3 text-2x1 border-2 border-black"  placeholder="senha" id="senha" name="senha">
-                </div>
-                <div id="botões">
+
+                    <input type="password" class="bg-slate-300 font-medium rounded-3xl py-1 m-3 text-2x1"  placeholder="senha" id="senha" name="senha">
+
                     <input type="button" value="Entrar" class="p-4 cursor-pointer py-2.5 w-64 px-5 me-2 mb-2 text-sm font-medium
                      text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700
                       focus:z-10 focus:ring-4 focus:ring-gray-500 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white
                     dark:hover:bg-gray-700" id="logar">
+
                 </div>
+
             </form>
-                </div>
-        </div>
+    </div>
 </body>
 </html>
