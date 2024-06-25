@@ -554,14 +554,30 @@ video {
   --tw-contain-style:  ;
 }
 
-.relative {
-  position: relative;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+.absolute {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .z-20 {
   z-index: 20;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+.m-5 {
+  margin: 1.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+  }
 .m-3 {
   margin: 0.75rem;
 }
@@ -744,6 +760,9 @@ video {
   flex-wrap: wrap;
 }
 
+.place-items-start {
+  place-items: start;
+}
 .items-center {
   align-items: center;
 }
@@ -844,14 +863,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-zinc-500\/50 {
-  background-color: rgb(113 113 122 / 0.5);
-}
-
-.bg-zinc-500\/20 {
-  background-color: rgb(113 113 122 / 0.2);
 }
 
 .bg-zinc-500\/10 {
