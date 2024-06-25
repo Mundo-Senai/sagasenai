@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link href="../../output.css" rel="stylesheet" >
 </head>
 <body class="bg-slate-500">
@@ -14,7 +14,7 @@
 
             <h2 class="text-[#fffff4] mx-auto text-3xl font-semibold tracking-wide"> Agendameno de salas</h2>
 
-            <form id="Login" class="flex flex-col gap-4 mt-7">
+            <form id="Login" class="flex flex-col gap-4 mt-7" action="../../php/controle/login.php" method="post">
 
                 <div id="usuário"class= "basis-16">
                     <h3 class=" text-[#fffff4] font-medium text-2x1 ">Usuário</h3>
@@ -25,10 +25,7 @@
                     <input type="password" class="bg-slate-300 font-medium rounded-3xl py-1 m-3 text-2x1 border-2 border-black"  placeholder="senha" id="senha" name="senha">
                 </div>
                 <div id="botões">
-                    <input type="button" value="Entrar" class="p-4 cursor-pointer py-2.5 w-64 px-5 me-2 mb-2 text-sm font-medium
-                     text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700
-                      focus:z-10 focus:ring-4 focus:ring-gray-500 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white
-                    dark:hover:bg-gray-700" id="logar">
+                    <input type="submit" value="Entrar" class=" font-semibold border-2 border-black  cursor-pointer py-2.5 w-64 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-500 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" id="logar">
                 </div>
             </form>
                 </div>
