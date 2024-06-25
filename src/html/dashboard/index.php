@@ -8,9 +8,16 @@
 </head>
 <body class="w-full min-h-screen grid grid-rows-[auto_1fr_auto]">
     <header class="w-full h-16 flex flex-row items-center justify-between bg-blue-600/95 px-6">
-        <h1 class="text-2xl font-bold text-white">Senai</h1>        
+        <h1 class="text-2xl font-bold text-white">Senai</h1>
         <div class="flex flex-row gap-4 items-center">
             <h2 class="text-lg text-white cursor-pointer">Perfil</h2>
+            <?php 
+                session_start();
+                $_SESSION['email'] = 'admin@gerente.com';
+                if ($_SESSION['email'] == 'admin@gerente.com') {
+                    echo '<h1 class="text-lg text-white cursor-pointer">Gerente</h1>';
+                }
+            ?>
             <h2 class="text-lg text-white cursor-pointer">Sair</h2>
         </div>
     </header>
