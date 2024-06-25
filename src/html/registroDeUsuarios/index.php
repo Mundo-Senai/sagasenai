@@ -17,7 +17,7 @@
             <h3 class="text-4xl font-semibold tracking-wide">Criar usuário</h3>
         
             <h3  class=" text-2xl tracking-wide">Email</h3>
-            <input type="text" name="email" placeholder="email" class="text-black 0 font-medium rounded-3xl py-1  text-2x1">
+            <input type="text" name="email" placeholder="email" class="text-black 0 font-medium rounded-3xl py-1 text-2x1">
 
             <h3  class=" text-2xl  tracking-wide">Nome</h3>
             <input type="text" name="nome"placeholder="nome" class=" text-black font-medium rounded-3xl py-1 text-2x1">
