@@ -10,7 +10,7 @@
     <header class="w-full h-16 flex flex-row items-center justify-between bg-blue-600/95 px-6">
         <h1 class="text-2xl font-bold text-white">Senai</h1>
         <div class="flex flex-row gap-4 items-center">
-            <h2 class="text-lg text-white cursor-pointer">Perfil</h2>
+            <a href="../perfil/index.html" class="text-lg text-white cursor-pointer">Perfil</a>
             <?php 
                 session_start();
                 $_SESSION['email'] = 'admin@gerente.com';
@@ -21,8 +21,8 @@
             <h2 class="text-lg text-white cursor-pointer">Sair</h2>
         </div>
     </header>
-    <main class="w-full h-full min-h-[calc(100%-40px)] py-10 flex flex-col pb-10 bg-white">
-        <div class="w-full h-full flex flex-col bg-slate-200/20">
+    <main class="w-full h-full min-h-[calc(100%-40px)] py-10 flex flex-col pb-10 ">
+        <div class="w-full h-full flex flex-col">
             <h1 class="text-3xl font-bold mx-auto">Cursos:</h1>
             <div class="w-full flex flex-col px-8 py-7 lg:flex-row gap-16 lg:flex-wrap items-center justify-center">
                 <!--Salas vao aqui-->
