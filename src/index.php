@@ -8,5 +8,10 @@
 </head>
 <body>
     <h1 class="text-3xl text-red-200 font-bold underline bg-red-800">Teste</h1>
+    <?php 
+        require_once'php/config/conexao.php';
+        ;
+    
+    ?>
 </body>
 </html>
