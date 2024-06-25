@@ -28,11 +28,15 @@
 
             <input type="date" name="data_fim" id="dataf" class="bg-slate-300 font-medium rounded-3xl border-4 py-1 m-3 cursor-pointer" placeholder="Data final">
 
+            <h3 class="text-2xl font-medium tracking-wide  py-1 m-3">Descrição do Curso</h3>
+
+            <input type="text" name="descricao" id="descf" class="bg-slate-300 font-medium rounded-3xl border-4 py-1 m-3 cursor-pointer" placeholder="Descrição do curso">
+
             <h3 class="text-2xl font-medium tracking-wide  py-1 m-3">Selecionar Professor</h3>
 
             <select name="professor" id="prof" class="bg-slate-300 font-medium rounded-3xl border-4 py-1 m-3 cursor-pointer">
                 <option value="" disabled selected>Selecione o Professor</option>
-                <!-- <?php 
+                    <?php 
                     $info_professores = $bd_conexao->query("SELECT * FROM usuarios WHERE papel = 1");
                     if($info_professores->num_rows > 0) {
                         for($i=1; $i <= $info_professores->num_rows; $i++) { 
@@ -45,13 +49,14 @@
                         echo "<option disabled selected>Não há professores disponíveis</option>";
                     }
                     
-                    ?>-->
+                    ?>
                 
             </select>
             <input type="submit" value="Criar Curso" class="transition ease-in-out delay-150 bg-green-600 hover:-translate-y-1 hover:scale-110 hover:bg-green-400 duration-300 ... rounded-lg text-[#fffff4] shadow-2xl  border-2 font-semibold text-2xl py-1 m-3 border-black cursor-pointer">    
         </div>
     </form>
     <script>
+        
     </script>
 </body>
 </html>
