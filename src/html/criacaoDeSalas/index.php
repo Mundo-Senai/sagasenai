@@ -48,5 +48,6 @@
                     dark:hover:bg-gray-700" id="logar">
         </form>
     </div>
+    <img src="../../assets/img/sala de aula do senai.webp" class="w-full h-full absolute top-0 left-0 -z-10 opacity-40">
 </body>
 </html>

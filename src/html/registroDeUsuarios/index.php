@@ -41,7 +41,7 @@
                 if($cursos_disponiveis->num_rows > 0) {
                     for($i=1; $i <= $cursos_disponiveis->num_rows; $i++) {
                         $info_curso = $cursos_disponiveis->fetch_assoc();
-                        echo "<option value='".$info_curso['id']."'>".$info_curso['nome']."</option>";
+                        echo "<option value='".$info_curso['id']."'>".$info_curso['nome_curso']."</option>";
                     }
                 } else {
                     echo "Não há cursos disponíveis";
@@ -70,5 +70,6 @@
         })
         
     </script>
+    <img src="../../assets/img/fundo-do-registro-de-usuário.jpg" class="w-full h-full absolute top-0 left-0 -z-10 opacity-40">
 </body>
 </html>

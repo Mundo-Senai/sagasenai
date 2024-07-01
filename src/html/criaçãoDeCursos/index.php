@@ -57,5 +57,6 @@
     </div>
     <script>
     </script>
+    <img src="../../assets/img/criação de curso.jpg" class="w-full h-full absolute top-0 left-0 -z-10 opacity-40">
 </body>
 </html>

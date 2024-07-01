@@ -554,6 +554,42 @@ video {
   --tw-contain-style:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.-z-10 {
+  z-index: -10;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.-z-10 {
+  z-index: -10;
+}
+
 .m-1 {
   margin: 0.25rem;
 }
@@ -595,6 +631,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -617,6 +657,11 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .min-h-\[calc\(100\%-40px\)\] {
@@ -650,6 +695,14 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-1\/12 {
+  width: 8.333333%;
+}
+
+.w-4\/12 {
+  width: 33.333333%;
 }
 
 .cursor-pointer {
@@ -769,6 +822,44 @@ video {
 
 .bg-zinc-500\/10 {
   background-color: rgb(113 113 122 / 0.1);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.bg-cyan-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 94 117 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\.\.\/\.\.\/assets\/\)\] {
+  background-image: url(../../assets/);
+}
+
+.bg-\[url\(\.\.\/\.\.\/assets\/img\)\] {
+  background-image: url(../../assets/img);
+}
+
+.bg-\[url\(\.\.\/\.\.\/assets\/img\/\)\] {
+  background-image: url(../../assets/img/);
+}
+
+.bg-\[url\(\.\.\/\.\.\/assets\/img\/fundo-tela-de-login\.jpg\)\] {
+  background-image: url(../../assets/img/fundo-tela-de-login.jpg);
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/assets\/img\/fundo-tela-de-login\.jpg\'\)\] {
+  background-image: url('../../assets/img/fundo-tela-de-login.jpg');
+}
+
+.bg-cover {
+  background-size: cover;
 }
 
 .p-2 {
@@ -913,6 +1004,10 @@ video {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.opacity-40 {
+  opacity: 0.4;
 }
 
 .transition-all {
