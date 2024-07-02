@@ -45,9 +45,14 @@
 
                         $duração_curso = ($data2 - $data1)/60/60/24;
 
-
+                        if($info_salas_assoc['status'] == 1) {
+                            echo '<div class="w-11/12 py-6 bg-green-300/90 border-2 border-black rounded-lg h-[calc(fit+56px)] flex flex-col justify-center gap-5 px-5 lg:flex-row md:w-2/4 lg:w-1/4 lg:min-w-[500px]">';
+                        } else if($info_salas_assoc['status'] == 2) {
+                            echo '<div class="w-11/12 py-6 bg-[#ffdf2ad3] border-2 border-black rounded-lg h-[calc(fit+56px)] flex flex-col justify-center gap-5 px-5 lg:flex-row md:w-2/4 lg:w-1/4 lg:min-w-[500px]">';
+                        } else {
+                            echo '<div class="w-11/12 py-6 bg-red-300/90 border-2 border-black rounded-lg h-[calc(fit+56px)] flex flex-col justify-center gap-5 px-5 lg:flex-row md:w-2/4 lg:w-1/4 lg:min-w-[500px]">';
+                        }
                         echo '
-                        <div class="w-11/12 py-6 bg-zinc-500/10 border-2 border-black rounded-lg h-[calc(fit+56px)] flex flex-col justify-center gap-5 px-5 lg:flex-row md:w-2/4 lg:w-1/4 lg:min-w-[500px]">
                             <div class="flex w-full lg:w-3/6 flex-col gap-1 justify-between h-full">
                                 <div class="flex flex-col gap-1">
                                     <h1 class="text-2xl text-black/85">Curso: ' .$info_salas_assoc['nome_curso'].'</h1>
@@ -55,9 +60,15 @@
                                     <p class="text-sm">Sala: '.$info_salas_assoc['codigo'].'</p>
                                     <p class="text-sm">Capacidade: '.$info_salas_assoc['capacidade'].'</p>
                                     <p class="text-sm">Duração: '.$duração_curso.' Dias</p>
-                                </div>
-                                <button class="bg-blue-600/95 mt-5 w-full text-white p-2 rounded duration-200 transition-all lg:hover:bg-blue-500/95">Entrar</button>
-                            </div>
+                                </div>';
+                                if($info_salas_assoc['status'] == 1) {
+                                    echo '<button disabled class="bg-blue-600/95 cursor-not-allowed mt-5 w-full text-white p-2 rounded duration-200 transition-all lg:hover:bg-blue-500/95">Entrar</button>';
+                                } else if($info_salas_assoc['status'] == 2) {
+                                    echo '<button disabled class="bg-slate-400/95 cursor-not-allowed mt-5 w-full text-white p-2 rounded duration-200 transition-all">Interditado</button>';
+                                } else {
+                                    echo '<button disabled class="bg-slate-400/95 cursor-not-allowed  mt-5 w-full text-white p-2 rounded duration-200 transition-all">Cheio</button>';
+                                }
+                            echo '</div>
                             <div class="flex items-center lg:w-3/6 w-full h-full ">
                                 <p class="border-black  rounded-md p-4 break-keep">'.$info_salas_assoc['descricao'].'</p>
                             </div>

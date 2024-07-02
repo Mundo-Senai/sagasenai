@@ -8,8 +8,8 @@
 
     if(isset($codigo) && isset($capacidade) && isset($curso)) {
 
-        $prepare = $bd_conexao->prepare('INSERT INTO salas(codigo, capacidade, curso_id) VALUES (?, ?, ?)');
-        $prepare->bind_param('sis', $codigo, $capacidade, $curso);
+        $prepare = $bd_conexao->prepare('INSERT INTO salas(codigo, capacidade, curso_id, status) VALUES (?, ?, ?, ?)');
+        $prepare->bind_param('sis', $codigo, $capacidade, $curso, 1);
         $prepare->execute();
     
         $prepare->close();
