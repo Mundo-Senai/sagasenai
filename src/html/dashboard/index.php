@@ -1,5 +1,9 @@
 <?php
-    include "../../php/config/conexao.php"
+    session_start();
+    if(!isset($_SESSION['email'])) {
+        header("Location: ../login/index.html");
+    }
+    include "../../php/config/conexao.php";
 ?>
 
 <!DOCTYPE html>
@@ -14,15 +18,15 @@
     <header class="w-full h-16 flex flex-row items-center justify-between bg-blue-600/95 px-6">
         <h1 class="text-2xl font-bold text-white">Senai</h1>        
         <div class="flex flex-row gap-4 items-center">
-            <a href="../perfil/index.html" class="text-lg text-white cursor-pointer">Perfil</a>
+            <a href="../perfil/index.php" class="text-lg text-white cursor-pointer">Perfil</a>
             <?php 
-                session_start();
-                $_SESSION['email'] = 'admin@gerente.com';
-                if ($_SESSION['email'] == 'admin@gerente.com') {
-                    echo '<h1 class="text-lg text-white cursor-pointer">Gerente</h1>';
+                if($_SESSION['email'] == 'admin@gerente.com') {
+                    echo '<a href="../telaGerente/" class="text-lg text-white cursor-pointer">Gerente</a>';
                 }
             ?>
-            <h2 class="text-lg text-white cursor-pointer">Sair</h2>
+            <form action="../../php/controle/sair.php" method="post">
+                <input type="submit" class="text-lg text-white cursor-pointer" value="Sair">
+            </form>
         </div>
     </header>
     <main class="w-full h-full min-h-[calc(100%-40px)] py-10 flex flex-col pb-10 ">

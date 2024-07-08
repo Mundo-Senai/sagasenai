@@ -23,7 +23,7 @@
         $prepare->bind_param('sssis', $email, $nome, $senha, $papel, $curso);
         $prepare->execute();
     
-        $preapre->close();
+        $prepare->close();
         $bd_conexao->close();
 
     }

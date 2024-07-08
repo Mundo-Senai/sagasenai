@@ -1,7 +1,12 @@
-<!----<?php
+<?php
+    include "../../php/config/conexao.php";
+    session_start();
+    if(isset($_SESSION['email']) != "admin@gerente.com") {
+        header("Location: ../../html/dashboard/");
+    }
     include "../../php/config/conexao.php";
 ?>
--->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

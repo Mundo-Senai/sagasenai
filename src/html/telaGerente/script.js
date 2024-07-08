@@ -23,7 +23,7 @@ $("#curso").on("change", () => {
         url: "../../php/controle/administrar_info.php",
         data: {curso_alterado: curso_alterado},
         success: function (response) {
-            console.log("deu certo")
+            console.log("deu certo, curso alterado")
         }, error: function (error) {
             console.log("erro"+ error)
         }
@@ -33,14 +33,14 @@ $("#curso").on("change", () => {
 
 })
 
-$("#sala").on("change", () => {
+$("#sala_alterado").on("change", () => {
     var sala_alterado = $("#sala_alterado").val()
     $.ajax({
         type: "Post",
         url: "../../php/controle/administrar_sala_info.php",
         data: {sala_alterado: sala_alterado},
         success: function (response) {
-            console.log("deu certo")
+            console.log("deu certo, sala alterado")
         }, error: function (error) {
             console.log("erro"+ error)
         }
