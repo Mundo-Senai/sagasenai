@@ -28,7 +28,7 @@
 
     }
 
-    header("Location: ../../html/login");
+    header("Location: ../../html/tela");
 
 
     
