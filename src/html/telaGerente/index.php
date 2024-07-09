@@ -40,13 +40,15 @@
                             $info_fetch = $info_cursos->fetch_assoc();
                             echo "<option value='".$info_fetch['id']."'>".$info_fetch['nome_curso']."</option>";
                         }
+                    } else {
+                        echo "<option disabled selected>Não há cursos registrados</option>";
                     }
                 ?>
                 </select>
-                <input type="submit" value="Excluir Curso" name="excluir" class=" m-4 p-4 cursor-pointer py-2.5 w-64 px-5 me-2 mb-2 text-sm font-medium
-                        text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700
-                        focus:z-10 focus:ring-4 focus:ring-gray-500 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white
-                        dark:hover:bg-gray-700">
+                <input type="submit" value="Excluir Curso" class=" m-4 p-4 cursor-pointer py-2.5 w-64 px-5 me-2 mb-2 text-sm font-medium
+                     text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700
+                      focus:z-10 focus:ring-4 focus:ring-gray-500 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white
+                    dark:hover:bg-gray-700" name="excluir">
             </form>
         </div>
 
@@ -61,6 +63,8 @@
                                 $info_fetch = $info_cursos->fetch_assoc();
                                 echo "<option value='".$info_fetch['id']."'>".$info_fetch['nome_curso']."</option>";
                             }
+                        } else {
+                            echo "<option disabled selected>Não há cursos registrados</option>";
                         }
                     ?>
                 </select>
@@ -97,6 +101,8 @@
                         $info_fetch = $info_cursos->fetch_assoc();
                         echo "<option value='".$info_fetch['id']."'>".$info_fetch['codigo']."</option>";
                     }
+                } else {
+                    echo "<option disabled selected>Não há salas registradas</option>";
                 }
             ?>
             <input type="submit" value="Excluir Sala" name="excluir_sala" class=" m-4 p-4 cursor-pointer py-2.5 w-64 px-5 me-2 mb-2 text-sm font-medium
@@ -118,6 +124,8 @@
                         $info_fetch = $info_cursos->fetch_assoc();
                         echo "<option value='".$info_fetch['id']."'>".$info_fetch['codigo']."</option>";
                     }
+                } else {
+                    echo "<option disabled selected>Não há salas registradas</option>";
                 }
             ?>
             </select>
@@ -154,17 +162,17 @@
 
             <h3  class=" text-2xl font-medium tracking-wide">Curso</h3>
             <select name="curso" id="curso_registro" class="text-black font-medium rounded-3xl py-1 m-3 text-2x1">
-            <option value="0" disabled selected  class="text-black text-2xl font-medium tracking-wide m-1">Selecione o Curso</option>
 
             <?php
                 $cursos_disponiveis = $bd_conexao->query("SELECT * FROM cursos");
                 if($cursos_disponiveis->num_rows > 0) {
+                    echo '<option value="0" class="text-black" disabled selected>Selecione o Curso</option>';
                     for($i=1; $i <= $cursos_disponiveis->num_rows; $i++) {
                         $info_curso = $cursos_disponiveis->fetch_assoc();
                         echo "<option value='".$info_curso['id']."'>".$info_curso['nome_curso']."</option>";
                     }
                 } else {
-                    echo "Não há cursos disponíveis";
+                    echo '<option disabled selected value="0" class="text-black">Não há cursos disponíveis</option>';
                 }
             ?>
 
@@ -175,7 +183,6 @@
                     dark:hover:bg-gray-700" id="logar">
         </form>
     </div>
-            <!------------------------------------------------------------------------------------------------>
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>

@@ -14,7 +14,7 @@
     <input class=" text-black font-medium rounded-3xl py-1 text-2x1" type="date" placeholder="Alterar Data de finalização" name="data_fim" value="'.$info_curso_assoc['data_fim'].'">
     <textarea class=" text-black font-medium rounded-3xl py-1 text-2x1" placeholder="Alterar Descrição" name="descricao" rows="7" colls="70" style="resize:none">'.$info_curso_assoc['descricao'].'</textarea>
     <select class=" text-black font-medium rounded-3xl py-1 text-2x1" name="professor" placeholder="Alterar Professor">';
-    echo "<option value='".$info_curso_fetch['id']."'>".$info_curso_assoc['nome']."</option>";
+    echo "<option value='".$info_curso_assoc['id']."'>".$info_curso_assoc['nome']."</option>";
 
     $info_cursos = $bd_conexao->query("SELECT * FROM usuarios WHERE papel = 1 and usuarios.id != '$info_professor'");
 

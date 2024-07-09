@@ -1,7 +1,9 @@
 <?php
+
     include "../../php/config/conexao.php";
 
-    if(!$_POST['excluir']) {
+
+    if(!isset($_POST['excluir'])) {
 
         $alterar_curso = mysqli_real_escape_string($bd_conexao, $_POST['curso']);
         $nome = mysqli_real_escape_string($bd_conexao, $_POST['nome']);
@@ -22,7 +24,14 @@
         }
     } else {
         $curso_deletar = mysqli_real_escape_string($bd_conexao, $_POST['curso_excluir']);
-        $deletar = $bd_conexao->query("DELETE FROM cursos WHERE id = $curso_deletar");
+        if ($bd_conexao->query("DELETE FROM cursos WHERE id = $curso_deletar") === TRUE) {
+            echo "Record deleted successfully";
+          } else {
+            echo "Error deleting record: " . $bd_conexao->error;
+          }
+          
+        $bd_conexao->close();
     }
 
-    header("Location: ../../html/administrar/index.php");
+    header("Location: ../../html/telaGerente/index.php");
+

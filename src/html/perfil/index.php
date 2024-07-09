@@ -23,7 +23,10 @@
             <a href="../dashboard/index.php" class="text-lg text-white cursor-pointer">Dashboard</a>
             <?php 
                 if ($_SESSION['email'] == 'admin@gerente.com') {
-                    echo '<h1 class="text-lg text-white cursor-pointer">Gerente</h1>';
+                    echo '
+                    <a href="../telaGerente/" class="text-lg text-white cursor-pointer">Gerente</a>
+                    <a href="../criaçãoDeSalas/" class="text-lg text-white cursor-pointer">Salas</a>
+                    <a href="../criaçãoDeCursos/" class="text-lg text-white cursor-pointer">Cursos</a>';
                 }
             ?>
             <form action="../../php/controle/sair.php" method="post">
@@ -42,7 +45,10 @@
                     <h1 class="text-xl font-bold">Nome: <?php echo $_SESSION["nome"];?></h1>
                     <h1 class="text-xl font-bold">Email: <?php echo $_SESSION["email"];?></h1>
                     <?php
-                    if($_SESSION["papel"] == 1) {
+                    if($_SESSION['email'] == 'admin@gerente.com'){
+                        echo 
+                        '<h1 class="text-xl font-bold">Cargo: Gerente </h1>';
+                    }else if($_SESSION["papel"] == 1) {
                         echo 
                         '<h1 class="text-xl font-bold">Cargo: Professor </h1>';
                     } else {
@@ -136,7 +142,7 @@
         </div>
     </main>
     <footer class="w-full h-10 bg-blue-600/95 flex items-center">
-        <h1 class="mx-auto text-xl text-white font-bold">Footer</h1>
+        <h1 class="mx-auto text-xl text-white font-bold">Direitos Reservados @2024</h1>
     </footer>
 </body>
 </html>

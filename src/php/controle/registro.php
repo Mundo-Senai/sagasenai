@@ -17,7 +17,7 @@
     }
 
 
-    if(isset($email) && isset($nome) && isset($senha) && isset($papel)) {
+    if($email != null && $email != "" && $nome != null && $nome != "" && $senha != null && $senha != "" && $papel != null && $papel != "") {
 
         $prepare = $bd_conexao->prepare('INSERT INTO usuarios(email, nome, senha, papel, cursos_id) VALUES (?, ?, ?, ?, ?)');
         $prepare->bind_param('sssis', $email, $nome, $senha, $papel, $curso);
@@ -28,7 +28,7 @@
 
     }
 
-    header("Location: ../../index.php");
+    header("Location: ../../html/login");
 
 
     

@@ -19,4 +19,4 @@
 
     }
 
-    header("Location: ../../html/");
+    header("Location: ../../html/dashboard/");

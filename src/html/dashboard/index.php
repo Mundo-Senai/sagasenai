@@ -21,7 +21,10 @@
             <a href="../perfil/index.php" class="text-lg text-white cursor-pointer">Perfil</a>
             <?php 
                 if($_SESSION['email'] == 'admin@gerente.com') {
-                    echo '<a href="../telaGerente/" class="text-lg text-white cursor-pointer">Gerente</a>';
+                    echo
+                    '<a href="../telaGerente/" class="text-lg text-white cursor-pointer">Gerente</a>
+                    <a href="../criaçãoDeSalas/" class="text-lg text-white cursor-pointer">Salas</a>
+                    <a href="../criaçãoDeCursos/" class="text-lg text-white cursor-pointer">Cursos</a>';
                 }
             ?>
             <form action="../../php/controle/sair.php" method="post">
@@ -85,7 +88,7 @@
         </div>
     </main>
     <footer class="w-full h-10 bg-blue-600/95 flex items-center">
-        <h1 class="mx-auto text-xl text-white font-bold">Footer</h1>
+        <h1 class="mx-auto text-xl text-white font-bold">Direitos Reservados @2024</h1>
     </footer>
 </body>
 </html>

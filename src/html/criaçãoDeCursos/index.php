@@ -35,7 +35,7 @@
 
             <h3 class="text-2xl font-medium tracking-wide  py-1 m-3">Descrição do Curso</h3>
 
-            <input type="text" name="descricao" id="descf" class="bg-slate-300 font-medium rounded-3xl border-4 py-1 m-3 cursor-pointer" placeholder="Descrição do curso">
+            <textarea name="descricao" id="descf" class="bg-slate-300 font-medium rounded-3xl border-4 py-1 m-3 cursor-pointer" placeholder="Descrição do curso" rows="3" colls="100" style="resize:none"></textarea>
 
             <h3 class="text-2xl font-medium tracking-wide  py-1 m-3">Selecionar Professor</h3>
 

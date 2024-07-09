@@ -20,8 +20,8 @@
     
         }
     } else {
-        /*$excluir_sala = mysqli_real_escape_string($bd_conexao, $_POST['sala_excluir']);
-        $excluir = $bd_conexao->query("DELETE FROM salas where id = $excluir_sala");*/
+        $excluir_sala = mysqli_real_escape_string($bd_conexao, $_POST['sala_excluir']);
+        $excluir = $bd_conexao->query("DELETE FROM salas where id = $excluir_sala");
     }
 
-    header("Location: ../../html/administrar/index.php");
+    header("Location: ../../html/telaGerente/index.php");
